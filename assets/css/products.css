@@ -1,0 +1,9 @@
+#products .card img
+{
+    height: 200px;
+}
+#products .btn
+{
+    background:#dc3545;
+    color: #fff;
+}

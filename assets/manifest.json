@@ -1,0 +1,16 @@
+{
+    "name": "Microtek_Inverter_PWA",
+    "short_name":"Microtek",
+    "start_url":"/DMS_microtek",
+    "display":"standalone",
+    "background_color":"#000",
+    "theme_color":"#000",
+    "orientation":"portrait-primary",
+    "icons":[
+        {
+            "src":"customImg/microtek.png",
+            "type":"image/png",
+            "sizes":"72*29"
+        }
+    ]
+}
