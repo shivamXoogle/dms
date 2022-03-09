@@ -12,12 +12,14 @@ async function dealerLogin() {
         data[key.name] = key.value;
     }
     const URL = base_url + 'Welcome/DelerLogin';
-    const passData = JSON.stringify(data) 
+
     const options = {
         method: 'POST',
-        body: passData   
+        body: JSON.stringify(data)   
     }
+    
     let response  = await fetch(URL,options);
+
     response = await response.json();
 
     console.log(response);
