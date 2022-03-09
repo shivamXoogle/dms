@@ -18,10 +18,12 @@ async function dealerLogin() {
     }
     let response  = await fetch(URL,options);
     response = await response.json();
-    
+
+    console.log('Response: ',response);
+
     if(response.status ==200)
     {
-        window.location.href = base_url + 'Welcome/Dashboard';
+        // window.location.href = base_url + 'Welcome/Dashboard';
     }
     else
     {
