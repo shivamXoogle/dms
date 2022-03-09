@@ -16,7 +16,8 @@ async function dealerLogin() {
         method: 'POST',
         body: JSON.stringify(data)    
     }
-    let response  = await fetch(URL,options);
+    try{
+        let response  = await fetch(URL,options);
     response = await response.json();
 
     console.log(response);
@@ -29,4 +30,9 @@ async function dealerLogin() {
     {
         alert('Invalid Credentials');
     }
+    }
+    catch( e){
+        console.log('Exception: ',e)
+    }
+    
 }
