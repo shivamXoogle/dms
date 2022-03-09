@@ -19,7 +19,7 @@ async function dealerLogin() {
     let response  = await fetch(URL,options);
     response = await response.json();
 
-    console.log('Response: ',response);
+    console.log(response);
 
     if(response.status ==200)
     {
