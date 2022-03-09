@@ -17,15 +17,12 @@ async function dealerLogin() {
         method: 'POST',
         body: JSON.stringify(data)   
     }
-    
+
     let response  = await fetch(URL,options);
-
-    response = await response.json();
-
-    console.log(response);
 
     if(response.status ==200)
     {
+        response = await response.json();
         window.location.href = base_url + 'Welcome/Dashboard';
     }
     else

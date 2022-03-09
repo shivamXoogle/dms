@@ -26,6 +26,7 @@ class Welcome extends CI_Controller {
 	}
 	public function DelerLogin()
 	{
+		
 		$data = json_decode(file_get_contents("php://input"),true);
 		$result = $this->MM->getDelerLogin($data);
 		$_SESSION['dealerDetails'] = $result;
