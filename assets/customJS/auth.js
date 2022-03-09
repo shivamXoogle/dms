@@ -12,28 +12,24 @@ async function dealerLogin() {
         data[key.name] = key.value;
     }
     const URL = base_url + 'Welcome/DelerLogin';
+    const passData = JSON.stringify(data) 
     const options = {
         method: 'POST',
-        body: JSON.stringify(data)    
+        body: passData   
     }
-    console.log(JSON.stringify(data));
-    try{
-        let response  = await fetch(URL,options);
+    let response  = await fetch(URL,options);
     response = await response.json();
 
     console.log(response);
 
     if(response.status ==200)
     {
-        // window.location.href = base_url + 'Welcome/Dashboard';
+        window.location.href = base_url + 'Welcome/Dashboard';
     }
     else
     {
         alert('Invalid Credentials');
     }
-    }
-    catch( e){
-        console.log('Exception: ',e)
-    }
+    
     
 }
