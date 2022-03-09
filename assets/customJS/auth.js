@@ -18,6 +18,7 @@ async function dealerLogin() {
     }
     let response  = await fetch(URL,options);
     response = await response.json();
+    
     if(response.status ==200)
     {
         window.location.href = base_url + 'Welcome/Dashboard';
