@@ -16,7 +16,7 @@ async function dealerLogin() {
         method: 'POST',
         body: JSON.stringify(data)    
     }
-    console.log(data,"rohit");
+    console.log(JSON.stringify(data));
     try{
         let response  = await fetch(URL,options);
     response = await response.json();
